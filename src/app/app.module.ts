@@ -5,15 +5,16 @@ import {FormsModule} from "@angular/forms";
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {CardComponent} from './card/card.component';
-import {FormComponent} from './form/form.component'
+import { PostFormComponent } from './post-form/post-form.component';
+import { PostComponent } from './post/post.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
-    FormComponent
+    PostFormComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,

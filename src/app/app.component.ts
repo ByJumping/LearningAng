@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
-export interface Card {
+export interface Post {
   title: string,
-  text: string
+  text: string,
+  id?: number
 }
 
 @Component({
@@ -12,15 +13,13 @@ export interface Card {
 })
 export class AppComponent {
 
-  flag = true
-
-  cards: Card[] = [
-    {title: 'Card 1', text: 'This is card number 1'},
-    {title: 'Card 2', text: 'This is card number 2'},
-    {title: 'Last Card', text: 'This is card number 3'}
+  posts: Post[] = [
+    {title: 'First post', text: 'This is post 1', id: 1},
+    {title: 'Second post', text: 'This is post 2', id: 2},
+    {title: 'Third post', text: 'This is post 3', id: 3},
   ]
 
-  toggleCards() {
-    this.flag = !this.flag
+  updatePosts(post: Post) {
+    this.posts.unshift(post)
   }
 }
